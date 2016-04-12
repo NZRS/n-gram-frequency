@@ -30,3 +30,6 @@ Sum(1 / frequency_of_n_gram) / number_of_n_gram
 
 Where an n-gram is not found in the frequency table then an adjustable score is added to the metric.
 
+## Example data
+The example data used to create the frequency table in the example is a list of 5000 most common words from http://www.wordfrequency.info/top5000.asp in file called top-5000.csv.  The list of test names is some common domain names in .nz with the TLD suffices removed.
+
