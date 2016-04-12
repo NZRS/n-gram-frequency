@@ -47,3 +47,25 @@ Where an n-gram is not found in the frequency table then a score is added to the
 ## Example data
 The example data used to create the frequency table in the example is a list of 5000 most common words from http://www.wordfrequency.info/top5000.asp in file called top-5000.csv.  The list of test names is 10 popular domain names in .nz with the TLD suffices removed.
 
+## command line syntax
+```
+usage: n-gram-frequency input [-o [output]] [-t [input_table]] [-n [size]] [-m [misses]] [-w [output_table]]
+        
+input:
+      The name of the file containing one string per line.
+
+Options:
+  -o  Calculate the metric for each string in the inout file and save the
+      output in the specified file name.  Defaults to 'output.csv'.
+
+  -t  Use the specified frequency table file instead of one generated from
+      the input file.  Defaults to 'table.csv'.  
+
+  -n  Use n-grams of the specified size.  Defaults to 2.
+
+  -m  Add the specified score to the metric for hash table misses.  
+      Defaults to 2.0.
+
+  -w  Write out generated hash table.  Pointless using this if -t
+      has also been specified.  Defaults to 'table.csv'.
+```
